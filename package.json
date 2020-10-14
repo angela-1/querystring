@@ -3,7 +3,7 @@
   "description": "A querystring library use esmodule.",
   "author": "Angela-1",
   "repository": "https://github.com/angela-1/querystring.git",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "license": "MulanPSL2",
   "type": "module",
   "keywords": [

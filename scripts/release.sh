@@ -1,10 +1,11 @@
 #! /bin/bash
 
-# release a new version
+# publish new version to npmjs
+
 
 npm config set registry http://registry.npmjs.org
 
-npm version $1
+npm version --allow-same-version=true
 
 npm publish --access public
 
