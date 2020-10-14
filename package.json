@@ -22,8 +22,7 @@
     "build": "yarn clear && tsc && rollup -c",
     "dev": "rollup -c -w",
     "test": "node test/test.js",
-    "pretest": "yarn build",
-    "publish": "node scripts/release.sh"
+    "pretest": "yarn build"
   },
   "lint-staged": {
     "*.js": [

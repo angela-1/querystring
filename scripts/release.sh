@@ -2,10 +2,12 @@
 
 # publish new version to npmjs
 
+VERSION=0.0.4
 
 npm config set registry http://registry.npmjs.org
 
-npm version --allow-same-version=true
+echo "new version" $VERSION
+npm version $VERSION --allow-same-version=true
 
 npm publish --access public
 
