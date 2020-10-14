@@ -1,0 +1,33 @@
+{
+  "name": "@angela-1/querystring",
+  "description": "A querystring library use esmodule.",
+  "author": "Angela-1",
+  "repository": "https://github.com/angela-1/querystring.git",
+  "version": "0.0.1",
+  "license": "MulanPSL2",
+  "type": "module",
+  "keywords": [
+    "querystring",
+    "esmodule"
+  ],
+  "main": "dist/querystring.cjs.js",
+  "module": "dist/querystring.esm.js",
+  "browser": "dist/querystring.umd.js",
+  "types": "dist/querystring.d.ts",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "clear": "rm -rf dist",
+    "build": "yarn clear && tsc && rollup -c",
+    "dev": "rollup -c -w",
+    "test": "node test/test.js",
+    "pretest": "yarn build"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "rollup": "^2.29.0",
+    "tslib": "^2.0.3",
+    "typescript": "^4.0.3"
+  }
+}
