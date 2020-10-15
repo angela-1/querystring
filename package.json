@@ -3,7 +3,7 @@
   "description": "A library deal with url search params built by es module",
   "author": "Angela-1",
   "repository": "https://github.com/angela-1/search-params.git",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MulanPSL2",
   "type": "module",
   "keywords": [
@@ -22,7 +22,8 @@
     "build": "yarn clear && tsc && rollup -c",
     "dev": "rollup -c -w",
     "test": "node test/test.js",
-    "pretest": "yarn build"
+    "pretest": "yarn build",
+    "build:release": "sh scripts/release.sh"
   },
   "lint-staged": {
     "*.js": [
