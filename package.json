@@ -3,7 +3,7 @@
   "description": "A library deal with url search params built by es module",
   "author": "Angela-1",
   "repository": "https://github.com/angela-1/search-params.git",
-  "version": "0.0.5",
+  "version": "0.0.1",
   "license": "MulanPSL2",
   "type": "module",
   "keywords": [

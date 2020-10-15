@@ -14,13 +14,14 @@ export function stringify(params: Params): string {
     } else {
       if (Array.isArray(value)) {
         console.log('is array', key, value, typeof value)
-        urlSearchParams.append(key, `${value}`)
+        value.forEach((v: string | number) => {
+          urlSearchParams.append(key, `${v}`)
+        })
       } else {
         if (typeof value === 'object') {
           console.error(`"${key}" value "${value}" is NOT supported`)
         } else {
           console.log('add param', key, value)
-
           urlSearchParams.append(key, `${value}`)
         }
       }
@@ -39,8 +40,8 @@ export function parse(encodedUri: string) {
   const params: Params = {}
   for (const [key, value] of searchParams.entries()) {
     console.log('kv', key, value)
-    if (value.includes(',')) {
-      params[key] = value.split(',')
+    if (Object.keys(params).includes(key)) {
+      params[key] = searchParams.getAll(key)
     } else {
       params[key] = value
     }
@@ -49,4 +50,9 @@ export function parse(encodedUri: string) {
   console.log('pa', params)
 
   return 'ok'
+}
+
+export default {
+  stringify,
+  parse
 }
