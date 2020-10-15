@@ -1,12 +1,49 @@
-import assert from "assert";
-import { add } from "../dist/querystring.esm.js";
+import assert from 'assert'
+import { stringify, parse } from '../src/search-params.js'
 
-function test(a, b, expected) {
-  assert.strictEqual(add(a, b), expected);
-  console.log(`\u001B[32m✓\u001B[39m ${expected}`);
+function testStringify(it, params, expected) {
+  console.log('it', it)
+  assert.strictEqual(stringify(params), expected)
+  console.log(`\u001B[32m✓\u001B[39m ${expected}`)
 }
 
-test(1, 3, 4);
-test(21, 93, 114);
+function testParse(it, encodedUri, expected) {
+  console.log('it', it)
+  parse(encodedUri)
+  // assert.strictEqual(stringify(params), expected)
+  console.log(`\u001B[32m✓\u001B[39m ${expected}`)
+}
 
-console.log("done");
+testStringify(
+  'different types',
+  {
+    search: 'sdfs',
+    page: 32,
+    valid: true,
+    labels: ['a', 'b']
+  },
+  'search=sdfs&page=32&valid=true&labels=a%2Cb'
+)
+
+testStringify(
+  '测试中文',
+  {
+    search: '玉发改',
+    page: '你好232',
+    valid: true,
+    labels: ['a', 'b'],
+    obj: {
+      c: 'obj a',
+      b: 'valu'
+    }
+  },
+  'search=%E7%8E%89%E5%8F%91%E6%94%B9&page=%E4%BD%A0%E5%A5%BD232&valid=true&labels=a%2Cb'
+)
+
+testParse(
+  'parse 1',
+  'search=%E7%8E%89%E5%8F%91%E6%94%B9&page=%E4%BD%A0%E5%A5%BD232&valid=true&labels=a%2Cb'
+)
+
+testParse('parse 2', 'search=sdfs&page=32&valid=true&labels=a%2Cb')
+console.log('done')

@@ -1,19 +1,19 @@
 {
-  "name": "@angela-1/querystring",
-  "description": "A querystring library use esmodule.",
+  "name": "@angela-1/search-params",
+  "description": "A library deal with url search params built by es module",
   "author": "Angela-1",
-  "repository": "https://github.com/angela-1/querystring.git",
+  "repository": "https://github.com/angela-1/search-params.git",
   "version": "0.0.4",
   "license": "MulanPSL2",
   "type": "module",
   "keywords": [
-    "querystring",
-    "esmodule"
+    "search-params",
+    "es-module"
   ],
-  "main": "dist/querystring.cjs.js",
-  "module": "dist/querystring.esm.js",
-  "browser": "dist/querystring.umd.js",
-  "types": "dist/querystring.d.ts",
+  "main": "dist/search-params.cjs.js",
+  "module": "dist/search-params.esm.js",
+  "browser": "dist/search-params.umd.js",
+  "types": "dist/search-params.d.ts",
   "engines": {
     "node": ">=12.0.0"
   },
