@@ -4,7 +4,7 @@
   "author": "Angela-1",
   "repository": "https://github.com/angela-1/search-params.git",
   "version": "0.0.1",
-  "license": "MulanPSL2",
+  "license": "MulanPSL-2.0",
   "type": "module",
   "keywords": [
     "search-params",
