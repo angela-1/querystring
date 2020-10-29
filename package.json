@@ -3,14 +3,14 @@
   "description": "A library deal with url search params built by es module",
   "author": "Angela-1",
   "repository": "https://github.com/angela-1/search-params.git",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MulanPSL-2.0",
   "type": "module",
   "keywords": [
     "search-params",
     "es-module"
   ],
-  "main": "dist/search-params.cjs.js",
+  "main": "dist/search-params",
   "module": "dist/search-params.esm.js",
   "browser": "dist/search-params.umd.js",
   "types": "dist/search-params.d.ts",

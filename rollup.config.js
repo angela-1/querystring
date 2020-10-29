@@ -24,7 +24,7 @@ export default [
   {
     input: 'src/search-params.js',
     output: [
-      { file: pkg.main, format: 'cjs' },
+      // { file: pkg.main, format: 'cjs' },
       { file: pkg.module, format: 'es' }
     ]
   }
